@@ -1,0 +1,54 @@
+/* Modern Dashboard Layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 340px 1fr 320px;
+  gap: 16px;
+  padding: 20px;
+  align-items: start;
+  height: 100vh;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+@media (max-width: 1400px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 12px 12px 0 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color);
+}
